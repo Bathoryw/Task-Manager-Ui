@@ -1,6 +1,7 @@
 import React from "react";
 import { Theme, createStyles, makeStyles } from "@material-ui/core";
 import TaskSection from "../TaskSection";
+import CreateTaskSection from "../CreateTaskSection";
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -14,6 +15,7 @@ const HomePage: React.FC = () => {
   return (
     <div className={classes.main}>
       <h1>Task Manager</h1>
+      <CreateTaskSection />
       <TaskSection />
     </div>
   );
