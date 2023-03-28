@@ -15,18 +15,17 @@ const useStyles = makeStyles((theme: Theme) =>
 );
 
 const sections = [
-  { columnName: "to do" },
-  { columnName: "in progress" },
-  { columnName: "done" },
+  { columnName: "to do", id: "abc1" },
+  { columnName: "in progress", id: "abc2" },
+  { columnName: "done", id: "abc3" },
 ];
 
 const TaskSection: React.FC = () => {
   const classes = useStyles();
-
   return (
     <Box className={classes.main}>
       {sections.map((section) => (
-        <TaskColumn title={section.columnName} />
+        <TaskColumn key={section.id} title={section.columnName} />
       ))}
     </Box>
   );
