@@ -1,11 +1,16 @@
 import React from "react";
-import { Theme, createStyles, makeStyles } from "@material-ui/core";
+import { Theme, createStyles, makeStyles, Box } from "@material-ui/core";
 import TaskSection from "../TaskSection";
 import CreateTaskSection from "../CreateTaskSection";
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
-    main: {},
+    main: {
+      background:"#061739"
+    },
+    title: {
+      margin: 0
+    }
   })
 );
 
@@ -13,11 +18,11 @@ const HomePage: React.FC = () => {
   const classes = useStyles();
 
   return (
-    <div className={classes.main}>
-      <h1>Task Manager</h1>
+    <Box className={classes.main}>
+      <h1 className={classes.title} >Task Manager</h1>
       <CreateTaskSection />
       <TaskSection />
-    </div>
+    </Box>
   );
 };
 
