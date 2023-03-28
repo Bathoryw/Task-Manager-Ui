@@ -9,7 +9,9 @@ import {
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
-    main: {},
+    main: {
+      margin:theme.spacing(3,0)
+    },
   })
 );
 

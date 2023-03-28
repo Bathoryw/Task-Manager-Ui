@@ -8,7 +8,7 @@ const useStyles = makeStyles((theme: Theme) =>
     main: {
       border: "1px solid black",
       display: "flex",
-      justifyContent: "center",
+      justifyContent: "space-around",
       gap: theme.spacing(4),
     },
   })
